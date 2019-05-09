@@ -1,0 +1,37 @@
+﻿<Window x:Class="RavenDB.View.FormCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RavenDB.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Cadastro de cliente" Height="368.333" Width="317.308"
+        Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock TextAlignment="Right" x:Name="textBlock" HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"><Run Text="Nome"/><Run Text=":"/></TextBlock>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Text="CPF:"/>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"><Run Text="Telefone"/><Run Text=":"/></TextBlock>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="10,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"><Run Text="E-mail"/><Run Text=":"/></TextBlock>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="10,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Text="Logradouro:"/>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="10,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"><Run Text="N"/><Run Text="úmero"/><Run Text=":"/></TextBlock>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="10,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Text="Complemento:"/>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Text="Estado:"/>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy7" HorizontalAlignment="Left" Margin="10,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"><Run Text="Cidade"/><Run Text=":"/></TextBlock>
+        <TextBox Text="{Binding Nome}" x:Name="textBox" Height="23" Margin="99,42,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding CPF}" x:Name="textBox_Copy" Height="23" Margin="99,67,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Telefone}" x:Name="textBox_Copy1" Height="23" Margin="99,123,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Email}" x:Name="textBox_Copy2" Height="23" Margin="99,148,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Endereco.Logradouro}" x:Name="textBox_Copy3" Height="23" Margin="99,173,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Endereco.Numero}" x:Name="textBox_Copy4" Height="23" Margin="99,198,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Endereco.Complemento}" x:Name="textBox_Copy5" Height="23" Margin="99,223,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Endereco.Estado}" x:Name="textBox_Copy6" Height="23" Margin="99,248,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Endereco.Cidade}" x:Name="textBox_Copy7" Height="23" Margin="99,273,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="75" Click="btnSalvar_Click"/>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy8" HorizontalAlignment="Left" Margin="10,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Text="Idade:"/>
+        <TextBox Text="{Binding Idade}" x:Name="textBox_Copy8" Height="23" Margin="99,95,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmbIndicador" ItemsSource="{Binding}" DisplayMemberPath="Nome" SelectedValuePath="Id" HorizontalAlignment="Left" Margin="99,15,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy9" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"><Run Text="Indicado por"/><Run Text=":"/></TextBlock>
+
+    </Grid>
+</Window>
